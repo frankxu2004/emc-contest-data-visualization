@@ -1,0 +1,56 @@
+<div class="content-grid detail-table" >
+
+<h4 id="page-title">朋友推荐</h4>
+    <form>
+        学号：<input ng-model="user_id" type="text">
+    <input type="submit" ng-click="findSimilar(user_id)" value="Go!" />
+    </form>
+
+    <div class="content-grid">
+    <div class="content-grid-30">
+        <h4>你的喜好</h4>
+        <table class="table table-condensed">
+            <thead>
+            <tr>
+                <th>服务名称</th>
+                <th>占比</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="item in result.self.services.split(';')">
+                <td>{{item.split(':')[0]}}</td>
+                <td>{{item.split(':')[1]}}</td>
+
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="content-grid-80 offset20">
+        <h4>相似用户</h4>
+        <table class="table table-condensed" id="ap_name">
+            <thead>
+            <tr>
+                <th>用户ID</th>
+                <th>相似度</th>
+                <th>喜爱服务前五</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="item in result.similar">
+                <td>{{item.similar_id}}</td>
+                <td>{{item.similarity}}</td>
+                <td>{{item.services.split(';').join('  ')}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div style="clear:both"></div>
+</div>
+
+
+</div>
+
+

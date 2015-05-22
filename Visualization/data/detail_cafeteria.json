@@ -1,0 +1,26 @@
+[
+  {
+    "location":"第一食堂",
+    "count":755,
+    "requests":46417,
+    "bytes":328358475
+  },
+  {
+    "location":"第三食堂",
+    "count":806,
+    "requests":63242,
+    "bytes":441520922
+  },
+  {
+    "location":"第二食堂",
+    "count":1514,
+    "requests":166841,
+    "bytes":1286747092
+  },
+  {
+    "location":"第四食堂",
+    "count":227,
+    "requests":4114,
+    "bytes":40256209
+  }
+]
