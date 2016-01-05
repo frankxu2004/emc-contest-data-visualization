@@ -256,7 +256,7 @@ function detailCtr($scope, $routeParams, $http) {
 
 function similarCtr($scope, $http) {
     $scope.findSimilar = function(user_id) {
-        $http.get('http://127.0.0.1:5000/similar/'+String(user_id)).success(function (data) {
+        $http.get('http://maview.us/emc/api/similar/'+String(user_id)).success(function (data) {
             if (typeof(data) == "undefined")
                 return;
             $scope.result = data;
@@ -288,7 +288,7 @@ function scoreCtr($scope, $http) {
         series: [{name: '学霸指数', data: []}]
     };
     $scope.getScore = function(user_id) {
-        $http.get('http://127.0.0.1:5000/score/'+String(user_id)).success(function (data) {
+        $http.get('http://maview.us/emc/api/score/'+String(user_id)).success(function (data) {
             if (typeof(data) == "undefined")
                 return;
             $scope.result = {};

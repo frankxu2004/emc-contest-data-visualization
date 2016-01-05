@@ -33,7 +33,7 @@ function mapLoadedCallback(day, grade) {
     var mainMap = new google.maps.Map(document.getElementById("map-canvas"),mapOption);    
 
     $.ajax({ 
-        url: "http://127.0.0.1:5000/map/"+String(day)+"/"+String(grade),
+        url: "http://maview.us/emc/api/map/"+String(day)+"/"+String(grade),
         dataType:"json",
         success:ajaxCallback
     });
