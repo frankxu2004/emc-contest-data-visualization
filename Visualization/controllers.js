@@ -25,7 +25,7 @@ function overviewCtr($scope, $http) {
         },
         series: [{name: '平均', data: []}]
     };
-    $http.get('/data/avgday.json').success(function (data) {
+    $http.get('/emc/data/avgday.json').success(function (data) {
 
         if (typeof(data) == "undefined")
             return;
@@ -67,25 +67,25 @@ function overviewCtr($scope, $http) {
 }
 
 function mapviewCtr($scope) {
-    $.getScript("/js/maploader.js");
+    $.getScript("/emc/js/maploader.js");
 }
 function detailCtr($scope, $routeParams, $http) {
     Highcharts.setOptions({global: {useUTC: false}});
     switch ($routeParams.id) {
         case "library":
             $scope.PageTitle = "图书馆 详细信息";
-            $http.get('/data/detail_library.json').success(ajaxCallback);
-            $http.get('/data/history_library.json').success(historyCallback);
+            $http.get('/emc/data/detail_library.json').success(ajaxCallback);
+            $http.get('/emc/data/history_library.json').success(historyCallback);
             break;
         case "cafeteria":
             $scope.PageTitle = "食堂 详细信息";
-            $http.get('/data/detail_cafeteria.json').success(ajaxCallback);
-            $http.get('/data/history_cafeteria.json').success(historyCallback);
+            $http.get('/emc/data/detail_cafeteria.json').success(ajaxCallback);
+            $http.get('/emc/data/history_cafeteria.json').success(historyCallback);
             break;
         case "classroom":
             $scope.PageTitle = "教室 详细信息";
-            $http.get('/data/detail_classroom.json').success(ajaxCallback);
-            $http.get('/data/history_classroom.json').success(historyCallback);
+            $http.get('/emc/data/detail_classroom.json').success(ajaxCallback);
+            $http.get('/emc/data/history_classroom.json').success(historyCallback);
             break;
         default:
             $scope.PageTitle = "详细信息";
