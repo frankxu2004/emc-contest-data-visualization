@@ -1,0 +1,29 @@
+<!-- overview page-->
+<div class="content-grid" id="map-controller">
+<h4>地图视图</h4>
+
+</div>
+<div style="margin: 20px 0px 0px 40px">
+    <form oninput="output1.value=slider1.value">
+        <h5><span style="display: inline-block">天数：</span><output name="output1" for="slider1">0</output><input type="range" name="slider1" value="0" max="152"/>
+        年级：<select name="grade">
+            <option value="全部">全部</option>
+            <option value="大一">大一</option>
+            <option value="大二">大二</option>
+            <option value="大三">大三</option>
+            <option value="大四">大四</option>
+            <option value="研一">研一</option>
+            <option value="研二">研二</option>
+            <option value="研三">研三</option>
+            <option value="其他">其他</option>
+        </select>
+            </h5>
+    </form>
+</div>
+
+<div id="map-container">
+
+ <div id="map-canvas" ></div>
+
+</div>
+

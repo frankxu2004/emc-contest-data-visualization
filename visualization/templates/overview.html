@@ -1,0 +1,76 @@
+<!-- overview page-->
+<div class="content-grid summary-table">
+    <h4>数据概览</h4>
+    <table class="summary-table-master" >
+        <tbody>
+            <tr>
+                <td>
+                    <span class="summary-table-big-num-name">最高人数时间</span>
+                   
+                    <span class="summary-table-big-num">17:20</span>
+                </td>
+                <td>
+                    <span class="summary-table-big-num-name">最高流量时间</span>
+                    <span class="summary-table-big-num">17:00</span>
+                </td>
+                <td>
+                     <span class="summary-table-big-num-name">最高人数地点</span>
+                    <span class="summary-table-big-num">第二食堂</span>
+                </td>
+                <td class="last">
+                    <span class="summary-table-big-num-name">最高服务类型</span>
+                    <span class="summary-table-big-num" style="font-size: 28px">搜索导航 35%</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="summary-table-slave">
+        <tbody>
+            <tr>
+                <td class="offset">
+                </td>
+                <td class="first">
+                    <span class="summary-table-big-num-name">次高人数时间</span>
+                    <span class="summary-table-big-num">12:00</span>
+                </td>
+                <td>
+                    <span class="summary-table-big-num-name">次高流量时间</span>
+                    <span class="summary-table-big-num">9:00</span>
+                </td>
+                <td>
+                    <span class="summary-table-big-num-name">次高人数地点</span>
+                    <span class="summary-table-big-num">东下院</span>
+                </td>
+                <td class="last">
+                    <span class="summary-table-big-num-name">次高服务类型</span>
+                    <span class="summary-table-big-num" style="font-size: 28px">门户 17%</span>
+                </td>
+                <td class="offset">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+<!-- overview table end -->
+<br/>
+<!-- chart -->
+<div class="content-grid main-chart" align="center">
+ 
+<div class="content-grid-switch">
+    <ul class="breadcrumb" id="chart-switch" align="center" style="background: #FFF">        
+        <li ng-class="{'non-active':chartMode==0}" ng-click="switchChart(0)"><a href="javascript:void(0)">人数</a><span class="divider">/</span></li>
+        <li ng-class="{'non-active':chartMode==1}" ng-click="switchChart(1)"><a href="javascript:void(0)">流量</a><span class="divider">/</span></li>
+        <li ng-class="{'non-active':chartMode==2}" ng-click="switchChart(2)"><a href="javascript:void(0)">请求</a></li>
+    </ul>
+</div>
+    <h4 align="left">近期趋势</h4>
+    <div id="main-chart-canvas">
+        <highchart config="chartConfig"></highchart>
+
+    </div>
+
+</div>
+
+<!-- chart end -->

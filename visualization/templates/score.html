@@ -1,0 +1,41 @@
+<div class="content-grid summary-table" >
+
+<h4 id="page-title">学霸指数</h4>
+    <form style="margin: 0 auto;width: 250px">
+        学号：<input ng-model="user_id" type="text">
+    <input type="submit" ng-click="getScore(user_id)" value="Go!" />
+    </form>
+    <br>
+    <table class="summary-table-master" >
+        <tbody>
+        <tr>
+            <td>
+                <span class="summary-table-big-num-name">今日</span>
+                <span class="summary-table-big-num">N/A</span>
+            </td>
+            <td>
+                <span class="summary-table-big-num-name">昨日</span>
+                <span class="summary-table-big-num">N/A</span>
+            </td>
+            <td>
+                <span class="summary-table-big-num-name">学期</span>
+                <span class="summary-table-big-num">{{result.score}}</span>
+            </td>
+            <td class="last">
+                <span class="summary-table-big-num-name">历史</span>
+                <span class="summary-table-big-num">{{result.score}}</span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div style="clear:both"></div>
+    <h4 align="left">近期趋势</h4>
+    <div id="main-chart-canvas">
+        <highchart config="chartConfig"></highchart>
+
+    </div>
+</div>
+
+
+

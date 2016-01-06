@@ -1,0 +1,26 @@
+[
+  {
+    "location":"包玉刚图书馆",
+    "count":13923,
+    "requests":348381,
+    "bytes":2185738263
+  },
+  {
+    "location":"图书馆",
+    "count":5967,
+    "requests":199359,
+    "bytes":1861743168
+  },
+  {
+    "location":"图书馆四区",
+    "count":4743,
+    "requests":68085,
+    "bytes":309946635
+  },
+  {
+    "location":"徐汇图书馆",
+    "count":4131,
+    "requests":938655,
+    "bytes":8667226161
+  }
+]
